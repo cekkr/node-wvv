@@ -6,10 +6,25 @@ const readline = require('readline');
         - NodeJS process management: https://nodejs.org/api/process.html
 */
 
+///
+/// readline
+///
+
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
+///
+/// Functions
+///
+
+function call(of, fun){
+    return () => {
+        of[fun].apply(of, arguments);
+    };
+}
+
 
 ///
 /// Shell
@@ -31,7 +46,10 @@ class Shell {
     
     waitCommand(){
         console.log(this.getWorkingDirectory()+' > ');
-        rl.on('line', this.readLine);
+
+        this.readLine.test = true;
+
+        rl.on('line', call(this, 'readLine'));
     }
     
     readLine(line){
