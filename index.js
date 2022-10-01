@@ -1,5 +1,5 @@
 
-var shell = require('./shell.js');
+var shell = require('./src/shell.js');
 
 // Process settings
 process.env.NODE_NO_WARNINGS = true;

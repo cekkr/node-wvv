@@ -1,5 +1,5 @@
 {
-  "name": "wvv.js",
+  "name": "wvv",
   "version": "0.0.1",
   "description": "A bash wrapper",
   "main": "index.js",

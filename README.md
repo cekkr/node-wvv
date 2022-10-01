@@ -1,1 +1,2 @@
-# wvv.js
+# wvv
+Temporary project placeholder.
